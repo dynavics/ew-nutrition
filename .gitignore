@@ -1,0 +1,6 @@
+**/.al*
+**/.snapshots/*
+**/.vscode/*
+*.app
+.DS_Store
+Thumbs.db

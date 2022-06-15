@@ -1,0 +1,30 @@
+{
+  "id": "50ca4f41-a0c9-404f-a719-07e9b47b775b",
+  "name": "EW Nutrition Application",
+  "publisher": "Dynavics Ltd",
+  "version": "0.1.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "https://www.dynavics.co.uk/contact",
+  "url": "https://www.dynavics.co.uk",
+  "logo": "./img/256x.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "20.0.0.0",
+  "idRanges": [
+    {
+      "from": 62700,
+      "to": 62799
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://www.dynavics.co.uk/contact",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "runtime": "9.0"
+}

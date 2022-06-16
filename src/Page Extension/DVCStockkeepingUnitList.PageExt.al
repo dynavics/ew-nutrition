@@ -1,4 +1,4 @@
-pageextension 50101 "DVC Stockkeeping Unit List" extends "Stockkeeping Unit List"
+pageextension 62701 "DVC Stockkeeping Unit List" extends "Stockkeeping Unit List"
 {
     actions
     {

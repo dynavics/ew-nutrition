@@ -1,4 +1,4 @@
-page 50102 "DVC Locations"
+page 62701 "DVC Locations"
 {
     Caption = 'Locations';
     PageType = ListPart;

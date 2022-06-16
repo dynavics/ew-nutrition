@@ -1,4 +1,4 @@
-page 50100 "DVC Mass Update"
+page 62702 "DVC Mass Update"
 {
     ApplicationArea = All;
     Caption = 'Mass Update';

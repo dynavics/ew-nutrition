@@ -1,4 +1,4 @@
-page 50101 "DVC Create SKU"
+page 62700 "DVC Create SKU"
 {
     ApplicationArea = All;
     Caption = 'Create SKU''s';

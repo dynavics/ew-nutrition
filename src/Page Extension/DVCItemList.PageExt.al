@@ -1,4 +1,4 @@
-pageextension 50102 "DVC Item List" extends "Item List"
+pageextension 62700 "DVC Item List" extends "Item List"
 {
     actions
     {

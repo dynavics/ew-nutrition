@@ -1,4 +1,4 @@
-codeunit 50100 "DVC MassUpdate Mgt."
+codeunit 62700 "DVC MassUpdate Mgt."
 {
 
     procedure OpenMassUpdate(var StockkeepingUnit: Record "Stockkeeping Unit")

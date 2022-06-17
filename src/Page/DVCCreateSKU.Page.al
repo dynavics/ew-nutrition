@@ -1,7 +1,7 @@
 page 62700 "DVC Create SKU"
 {
     ApplicationArea = All;
-    Caption = 'Create SKU''s';
+    CaptionML = ENU = 'Create SKU''s', ENG = 'Create SKU''s', ESP = 'Crear SKUs';
     PageType = List;
     SourceTable = Item;
     UsageCategory = Tasks;
@@ -36,6 +36,7 @@ page 62700 "DVC Create SKU"
                 ShowCaption = false;
                 part(location; "DVC Locations")
                 {
+                    CaptionML = ENU = 'Locations', ENG = 'Locations', ESP = 'Almacenes';
                     ApplicationArea = All;
 
                 }
@@ -49,7 +50,7 @@ page 62700 "DVC Create SKU"
             action("Create SKU's")
             {
                 ApplicationArea = Planning;
-                Caption = 'Create SKU''s';
+                CaptionML = ENU = 'Create SKU''s', ENG = 'Create SKU''s', ESP = 'Crear SKUs';
                 Image = ExecuteBatch;
                 Promoted = true;
                 PromotedCategory = Process;

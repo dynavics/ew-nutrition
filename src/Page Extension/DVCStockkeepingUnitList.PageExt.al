@@ -7,7 +7,7 @@ pageextension 62701 "DVC Stockkeeping Unit List" extends "Stockkeeping Unit List
             action("Mass Update")
             {
                 ApplicationArea = Planning;
-                Caption = 'Mass Update';
+                CaptionML = ENU = 'Mass Update', ENG = 'Mass Update', ESP = 'Actualización Masiva';
                 Image = CreateSKU;
                 Promoted = true;
                 PromotedCategory = Process;

@@ -7,7 +7,7 @@ pageextension 62700 "DVC Item List" extends "Item List"
             action("Create SKU''s")
             {
                 ApplicationArea = Planning;
-                Caption = 'Create SKU''s';
+                CaptionML = ENU = 'Create SKU''s', ENG = 'Create SKU''s', ESP = 'Crear SKUs';
                 Image = CreateSKU;
                 Promoted = true;
                 PromotedCategory = Process;

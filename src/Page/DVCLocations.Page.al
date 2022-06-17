@@ -1,6 +1,6 @@
 page 62701 "DVC Locations"
 {
-    Caption = 'Locations';
+    CaptionML = ENU = 'Locations', ENG = 'Locations', ESP = 'Almacenes';
     PageType = ListPart;
     SourceTable = Location;
     InsertAllowed = false;

@@ -20,7 +20,7 @@ page 62702 "DVC Mass Update"
                 field("Replenishment System HEADER"; SKUReplenishmentSystemField)
                 {
                     ApplicationArea = Planning;
-                    CaptionML = ENU = 'Replenishment System', ENG = 'Replenishment System', ESP = 'Sistema reposición';
+                    CaptionML = ENU = 'Replenishment System', ENG = 'Replenishment System', ESP = 'Sistema Reposición';
                     Importance = Promoted;
                     ToolTip = 'Specifies the type of supply order that is created by the planning system when the SKU needs to be replenished.';
                 }
@@ -60,36 +60,36 @@ page 62702 "DVC Mass Update"
                     CaptionML = ENU = 'Assembly', ENG = 'Assembly', ESP = 'Ensamblado';
                     field("Assembly Policy HEADER"; AssemblyPolicyField)
                     {
-                        CaptionML = ENU = 'Assembly Policy', ENG = 'Assembly Policy', ESP = 'Directiva de ensamblado';
+                        CaptionML = ENU = 'Assembly Policy', ENG = 'Assembly Policy', ESP = 'Directiva de Ensamblado';
                         ApplicationArea = Assembly;
                         ToolTip = 'Specifies which default order flow is used to supply this SKU by assembly.';
                     }
                 }
                 group(Production)
                 {
-                    CaptionML = ENU = 'Production', ENG = 'Production', ESP = 'Produccion';
+                    CaptionML = ENU = 'Production', ENG = 'Production', ESP = 'Producción';
                     field("Manufacturing Policy HEADER"; ManufacturingPolicyField)
                     {
-                        CaptionML = ENU = 'Manufacturing Policy', ENG = 'Manufacturing Policy', ESP = 'Directiva de fabricación';
+                        CaptionML = ENU = 'Manufacturing Policy', ENG = 'Manufacturing Policy', ESP = 'Directiva de Fabricación';
                         ApplicationArea = Manufacturing;
                         ToolTip = 'Specifies if additional orders for any related components are calculated.';
                     }
                     field("Flushing Method HEADER"; FlushingMethodField)
                     {
-                        CaptionML = ENU = 'Flushing Method', ENG = 'Flushing Method', ESP = 'Flushing method';
+                        CaptionML = ENU = 'Flushing Method', ENG = 'Flushing Method', ESP = 'Método de baja';
                         ApplicationArea = Manufacturing;
                         ToolTip = 'Specifies how consumption of the item (component) is calculated and handled in production processes. Manual: Enter and post consumption in the consumption journal manually. Forward: Automatically posts consumption according to the production order component lines when the first operation starts. Backward: Automatically calculates and posts consumption according to the production order component lines when the production order is finished. Pick + Forward / Pick + Backward: Variations with warehousing.';
                     }
                     field("Components at Location HEADER"; ComponentsAtLocationField)
                     {
-                        CaptionML = ENU = 'Components at Location', ENG = 'Components at Location', ESP = 'Components at location';
+                        CaptionML = ENU = 'Components at Location', ENG = 'Components at Location', ESP = 'Componentes en Almacén';
                         ApplicationArea = Manufacturing;
                         ToolTip = 'Specifies the inventory location from where the production order components are to be taken when producing this SKU.';
                         TableRelation = Location;
                     }
                     field("Lot Size HEADER"; LotSizeField)
                     {
-                        CaptionML = ENU = 'Lot Size', ENG = 'Lot Size', ESP = 'Lot Size';
+                        CaptionML = ENU = 'Lot Size', ENG = 'Lot Size', ESP = 'Tamaño de Lote';
                         ApplicationArea = Manufacturing;
                         ToolTip = 'Specifies for the SKU, the same as the field does on the item card.';
                         DecimalPlaces = 0 : 5;
@@ -202,7 +202,7 @@ page 62702 "DVC Mass Update"
                 }
                 group("Reorder-Point Parameters")
                 {
-                    CaptionML = ENU = 'Reorder-Point Parameters', ENG = 'Reorder-Point Parameters', ESP = 'PArámetros de punto pedido';
+                    CaptionML = ENU = 'Reorder-Point Parameters', ENG = 'Reorder-Point Parameters', ESP = 'Parámetros de punto pedido';
                     grid(Control39)
                     {
                         GridLayout = Rows;
@@ -290,7 +290,7 @@ page 62702 "DVC Mass Update"
                             }
                             field("Order Multiple HEADER"; OrderMultipleField)
                             {
-                                CaptionML = ENU = 'Order Multiple', ENG = 'Order Multiple', ESP = 'Multiplos de Pedido';
+                                CaptionML = ENU = 'Order Multiple', ENG = 'Order Multiple', ESP = 'Múltiplos de Pedido';
                                 ApplicationArea = Planning;
                                 Enabled = OrderMultipleEnable;
                                 ToolTip = 'Specifies for the SKU, the same as the field does on the item card.';
@@ -304,7 +304,7 @@ page 62702 "DVC Mass Update"
 
             repeater(SKUs)
             {
-                Caption = 'SKU''s to modify';
+                CaptionML = ENU = 'SKU''s to modify', ENG = 'SKU''s to modify', ESP = 'SKUs a modificar';
                 field("Item No."; Rec."Item No.")
                 {
                     ToolTip = 'Specifies the item number to which the SKU applies.';
@@ -504,7 +504,7 @@ page 62702 "DVC Mass Update"
             action("Process Update")
             {
                 ApplicationArea = Planning;
-                Caption = 'Process Update';
+                CaptionML = ENU = 'Process Update', ENG = 'Process Update', ESP = 'Procesar Actualización';
                 Image = ExecuteBatch;
                 Promoted = true;
                 PromotedCategory = Process;

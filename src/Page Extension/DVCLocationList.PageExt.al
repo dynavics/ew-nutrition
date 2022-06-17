@@ -7,7 +7,7 @@ pageextension 62702 "DVC Location List" extends "Location List"
             action("Update Routes")
             {
                 ApplicationArea = Location;
-                Caption = 'Update Routes';
+                CaptionML = ENU = 'Update Routes', ENG = 'Update Routes', ESP = 'Actualizar Rutas';
                 Image = CopyRouteHeader;
                 Promoted = true;
                 PromotedCategory = Process;

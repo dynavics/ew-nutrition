@@ -93,7 +93,7 @@ page 62703 "DVC Update Routes"
             action("Process Update")
             {
                 ApplicationArea = Location;
-                CaptionML = ENU = 'Process Update', ENG = 'Process Update', ESP = 'Procesar actualización';
+                CaptionML = ENU = 'Process Update', ENG = 'Process Update', ESP = 'Procesar Actualización';
                 Image = ExecuteBatch;
                 Promoted = true;
                 PromotedCategory = Process;

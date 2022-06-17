@@ -156,5 +156,79 @@ codeunit 62700 "DVC MassUpdate Mgt."
 
     end;
 
+    procedure OpenUpdateRoutes(var Locations: Record Location)
+    var
+        UpdateRoutes: page "DVC Update Routes";
+    begin
+        Clear(UpdateRoutes);
+        UpdateRoutes.SetTableView(Locations);
+        UpdateRoutes.RunModal();
+    end;
 
+    procedure UpdateRoutes(LocationPosition: Enum "DVC Update Route Selection"; var Location: Record Location; InTransitCode: Code[20]; ShippingAgentCode: Code[20]; ShippingAgentService: Code[20])
+    var
+        Text001: TextConst ENU = 'You are going to update %1 routes, are you sure?', ENG = 'You are going to update %1 routes, are you sure?', ESP = 'Va a actualizar %1 rutas, ¿Está seguro?';
+        Text002: TextConst ENU = 'There aren''t locations in the selected filter', ENG = 'There aren''t locations in the selected filter', ESP = 'No hay almacenes en el filtro seleccionado';
+        Text003: TextConst ENU = 'Process finished successfully. Updated %1 routes.', ENG = 'process finished successfully. Updated %1 routes.', ESP = 'Proceso finalizado correctamente. Rutas actualizadas: %1.';
+        TotalRoutes: Integer;
+        TransferRoute: Record "Transfer Route";
+
+    begin
+        if not Location.FindSet() then
+            Error(Text002);
+
+        repeat
+            if (LocationPosition = LocationPosition::Origin) or (LocationPosition = LocationPosition::Both) then begin
+                Location.CalcFields("Transfer Routes as Origin");
+                TotalRoutes += Location."Transfer Routes as Origin";
+            end;
+
+            if (LocationPosition = LocationPosition::Destination) or (LocationPosition = LocationPosition::Both) then begin
+                Location.CalcFields("Transfer Routes as Destination");
+                TotalRoutes += Location."Transfer Routes as Destination";
+            end;
+
+        until Location.Next() = 0;
+        if not confirm(StrSubstNo(Text001, Format(TotalRoutes))) then
+            exit;
+
+        if Location.FindSet() then
+            repeat
+                if (LocationPosition = LocationPosition::Origin) or (LocationPosition = LocationPosition::Both) then begin
+                    TransferRoute.SetRange("Transfer-from Code", Location.Code);
+                    UpdateRoutesForLocation(TransferRoute, InTransitCode, ShippingAgentCode, ShippingAgentService);
+                    TransferRoute.SetRange("Transfer-from Code");
+
+                end;
+
+                if (LocationPosition = LocationPosition::Destination) or (LocationPosition = LocationPosition::Both) then begin
+                    TransferRoute.SetRange("Transfer-to Code", Location.Code);
+                    UpdateRoutesForLocation(TransferRoute, InTransitCode, ShippingAgentCode, ShippingAgentService);
+                end;
+            until Location.Next() = 0;
+
+
+        Message(StrSubstNo(Text003, format(TotalRoutes)));
+    end;
+
+    local procedure UpdateRoutesForLocation(var TransferRoute: Record "Transfer Route"; InTransitCode: Code[20]; ShippingAgentCode: Code[20]; ShippingAgentService: Code[20]): Boolean
+    begin
+        if TransferRoute.FindSet() then
+            repeat
+                if InTransitCode <> '' then
+                    TransferRoute.Validate("In-Transit Code", InTransitCode);
+
+                if ShippingAgentCode <> '' then
+                    TransferRoute.Validate("Shipping Agent Code", ShippingAgentCode);
+
+                if ShippingAgentService <> '' then
+                    TransferRoute.Validate("Shipping Agent Service Code", ShippingAgentService);
+
+                TransferRoute.Modify();
+
+
+            until TransferRoute.Next() = 0;
+
+
+    end;
 }

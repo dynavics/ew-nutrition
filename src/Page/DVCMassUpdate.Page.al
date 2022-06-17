@@ -26,7 +26,7 @@ page 62702 "DVC Mass Update"
                 }
                 field("Lead Time Calculation HEADER"; LeadtimecalculationField)
                 {
-                    CaptionML = ENU = 'Lead Time Calculation', ENG = 'Lead Time Calculation', ESP = 'Plazo Entrega (Dias)';
+                    CaptionML = ENU = 'Lead Time Calculation', ENG = 'Lead Time Calculation', ESP = 'Plazo Entrega (Días)';
                     ApplicationArea = Planning;
                     ToolTip = 'Specifies a date formula for the amount of time it takes to replenish the item.';
                 }
@@ -49,7 +49,7 @@ page 62702 "DVC Mass Update"
                     Caption = 'Transfer';
                     field("Transfer-from Code HEADER"; TransferFromCodeField)
                     {
-                        CaptionML = ENU = 'Transfer-from Code', ENG = 'Transfer-from Code', ESP = 'Transfer. desde Cod.';
+                        CaptionML = ENU = 'Transfer-from Code', ENG = 'Transfer-from Code', ESP = 'Transfer. desde Cód.';
                         ApplicationArea = Planning;
                         ToolTip = 'Specifies the code of the location that items are transferred from.';
                         TableRelation = Location;

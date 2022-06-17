@@ -1,7 +1,7 @@
 page 62702 "DVC Mass Update"
 {
     ApplicationArea = All;
-    Caption = 'Mass Update';
+    CaptionML = ENU = 'Mass Update', ENG = 'Mass Update', ESP = 'Actualización Masiva';
     PageType = List;
     SourceTable = "Stockkeeping Unit";
     UsageCategory = Tasks;
@@ -16,7 +16,7 @@ page 62702 "DVC Mass Update"
 
             group(Replenishment)
             {
-                Caption = 'Replenishment';
+                CaptionML = ENU = 'Replenishment', ENG = 'Replenishment', ESP = 'Reposición';
                 field("Replenishment System HEADER"; SKUReplenishmentSystemField)
                 {
                     ApplicationArea = Planning;
